@@ -1,0 +1,12 @@
+.env
+.env.local
+.env.*.local
+.next
+out
+node_modules
+coverage
+dist
+*.log
+tsconfig.tsbuildinfo
+Dockerfile.local
+.DS_Store

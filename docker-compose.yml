@@ -1,0 +1,20 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ghcr.io/yaman12wqa/web-f4:local
+    container_name: yaman-portfolio
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "wget -qO- http://127.0.0.1:8080/api/health | grep -q '\"status\":\"ok\"'",
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
