@@ -1,8 +1,8 @@
 {
-  "name": "yaman-alsheabe-production-portfolio",
+  "name": "computer-engineering-student-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Production-ready personal portfolio for YMAN ALSHEABE with Next.js 15, Tailwind CSS, shadcn/ui components, Docker, Nginx, and DevSecOps CI.",
+  "description": "Work-in-progress portfolio for a Computer Engineering student, with conservative and verified skill claims.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -24,6 +24,7 @@
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.5",
     "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
