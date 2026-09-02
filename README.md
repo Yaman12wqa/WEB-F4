@@ -53,5 +53,5 @@ not automatically presented as the student's personal technical skills.
 
 ## Current status
 
-This portfolio remains a work in progress and should stay private until the linked
-projects have been reviewed and the student can explain the claims included here.
+This public portfolio remains a work in progress. It intentionally limits its
+claims to confirmed skills while the linked projects are reviewed as learning work.
