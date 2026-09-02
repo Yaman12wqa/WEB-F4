@@ -1,13 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
-  ExternalLink,
   GitBranch,
-  Mail,
   MapPin,
-  ShieldCheck,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -19,16 +15,13 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { ContactForm } from "@/components/contact-form";
 import { ThemeToggle } from "@/components/theme-toggle";
 import {
+  activities,
   architectureHighlights,
-  blogPosts,
   contactLinks,
   education,
-  experience,
   hero,
-  hobbies,
   identity,
   metrics,
   projects,
@@ -39,7 +32,7 @@ import {
 const navItems = [
   { href: "#projects", label: "Projects" },
   { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
+  { href: "#activities", label: "Activities" },
   { href: "#education", label: "Education" },
   { href: "#contact", label: "Contact" },
 ];
@@ -70,8 +63,8 @@ export default function Home() {
         <div className="section-shell grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="grid gap-7">
             <div className="flex flex-wrap items-center gap-3">
-              <Badge variant="outline">Student ID {identity.schoolId}</Badge>
-              <Badge variant="outline">Next.js 15 production portfolio</Badge>
+              <Badge variant="outline">Computer Engineering</Badge>
+              <Badge variant="outline">Student portfolio in progress</Badge>
             </div>
             <div className="grid gap-5">
               <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-normal sm:text-5xl lg:text-6xl">
@@ -95,9 +88,9 @@ export default function Home() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href={`mailto:${identity.email}`}>
-                  <Mail aria-hidden="true" />
-                  Contact
+                <a href={identity.github} target="_blank" rel="noreferrer">
+                  <GitBranch aria-hidden="true" />
+                  GitHub profile
                 </a>
               </Button>
             </div>
@@ -144,8 +137,8 @@ export default function Home() {
 
       <SectionHeading
         eyebrow="Selected work"
-        title="Projects"
-        description="Each project below comes from a public repository reviewed for this portfolio, with problem context, stack, links, and contribution scope."
+        title="Learning projects"
+        description="These repositories are being reviewed as learning material. Technologies shown on a card describe the codebase and do not automatically represent a personal skill claim."
         id="projects"
       />
       <section className="pb-16">
@@ -158,20 +151,20 @@ export default function Home() {
                     <CardTitle>{project.name}</CardTitle>
                     <CardDescription className="mt-2">{project.type}</CardDescription>
                   </div>
-                  <Badge variant="outline">Real repository</Badge>
+                  <Badge variant="outline">Under review</Badge>
                 </div>
               </CardHeader>
               <CardContent className="grid flex-1 gap-5">
                 <div className="grid gap-2">
-                  <h3 className="text-sm font-semibold">Problem solved</h3>
+                  <h3 className="text-sm font-semibold">Project summary</h3>
                   <p className="text-sm leading-6 text-muted-foreground">
-                    {project.problem}
+                    {project.summary}
                   </p>
                 </div>
                 <div className="grid gap-2">
-                  <h3 className="text-sm font-semibold">Tech stack</h3>
+                  <h3 className="text-sm font-semibold">Technologies present</h3>
                   <div className="flex flex-wrap gap-2">
-                    {project.stack.map((tech) => (
+                    {project.technologies.map((tech) => (
                       <Badge key={tech} variant="secondary">
                         {tech}
                       </Badge>
@@ -179,9 +172,9 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="grid gap-2">
-                  <h3 className="text-sm font-semibold">Contribution</h3>
+                  <h3 className="text-sm font-semibold">Review status</h3>
                   <p className="text-sm leading-6 text-muted-foreground">
-                    {project.contribution}
+                    {project.reviewStatus}
                   </p>
                 </div>
                 <div className="mt-auto flex flex-col gap-3 sm:flex-row">
@@ -189,12 +182,6 @@ export default function Home() {
                     <a href={project.github} target="_blank" rel="noreferrer">
                       <GitBranch aria-hidden="true" />
                       GitHub
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a href={project.liveDemo} target="_blank" rel="noreferrer">
-                      <ExternalLink aria-hidden="true" />
-                      Live demo/runbook
                     </a>
                   </Button>
                 </div>
@@ -206,8 +193,8 @@ export default function Home() {
 
       <SectionHeading
         eyebrow="Current capability"
-        title="Skills"
-        description="Levels are intentionally conservative and based on the public project work included above."
+        title="Confirmed skills and languages"
+        description="Levels below come from information confirmed by the student, not from technologies detected in AI-assisted repositories."
         id="skills"
       />
       <section className="pb-16">
@@ -237,14 +224,14 @@ export default function Home() {
       </section>
 
       <SectionHeading
-        eyebrow="Practice record"
-        title="Experience"
-        description="The available record is academic and project-based, with emphasis on full-stack delivery and operational readiness."
-        id="experience"
+        eyebrow="Student record"
+        title="Activities and current learning"
+        description="This section records confirmed student activity without presenting coursework as employment."
+        id="activities"
       />
       <section className="pb-16">
         <div className="section-shell grid gap-5">
-          {experience.map((item) => (
+          {activities.map((item) => (
             <div key={item.role} className="grid gap-4 rounded-lg border bg-card p-6 md:grid-cols-[220px_1fr]">
               <div className="grid content-start gap-3">
                 <item.icon className="size-6 text-primary" aria-hidden="true" />
@@ -270,7 +257,7 @@ export default function Home() {
       <SectionHeading
         eyebrow="Academic profile"
         title="Education"
-        description="The portfolio keeps academic facts explicit and separates confirmed information from unpublished data."
+        description="Only confirmed academic information is included. Graduation date and other coursework can be added after verification."
         id="education"
       />
       <section className="pb-16">
@@ -282,15 +269,14 @@ export default function Home() {
             </CardHeader>
             <CardContent className="grid gap-3 text-sm leading-6 text-muted-foreground">
               <p>Student: {identity.name}</p>
-              <p>School number: {identity.schoolId}</p>
-              <p>GPA: {education.gpa}</p>
+              <p>Current level: {education.year}</p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader>
               <CardTitle>Relevant courses</CardTitle>
               <CardDescription>
-                Subjects represented directly in the repository portfolio.
+                Confirmed coursework and current study.
               </CardDescription>
             </CardHeader>
             <CardContent className="grid gap-3">
@@ -306,25 +292,9 @@ export default function Home() {
       </section>
 
       <SectionHeading
-        eyebrow="Personal interests"
-        title="Hobbies"
-        description="These interests align with the projects and learning path shown in the repository history."
-        id="hobbies"
-      />
-      <section className="pb-16">
-        <div className="section-shell grid gap-3 sm:grid-cols-2">
-          {hobbies.map((hobby) => (
-            <div key={hobby} className="rounded-lg border bg-card p-5 text-sm leading-6 text-muted-foreground">
-              {hobby}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <SectionHeading
-        eyebrow="Production design"
-        title="Architecture"
-        description="The portfolio is deliberately structured as a deployable artifact, not only a visual page."
+        eyebrow="Repository implementation"
+        title="How this portfolio is organized"
+        description="These notes document the repository itself and should not be read as claims of professional experience."
         id="architecture"
       />
       <section className="pb-16">
@@ -342,41 +312,13 @@ export default function Home() {
       </section>
 
       <SectionHeading
-        eyebrow="Engineering notes"
-        title="Blog"
-        description="Short notes document the production decisions behind this submission."
-        id="blog"
-      />
-      <section className="pb-16">
-        <div className="section-shell grid gap-5 md:grid-cols-3">
-          {blogPosts.map((post) => (
-            <Card key={post.slug}>
-              <CardHeader>
-                <CardTitle className="leading-7">
-                  <Link href={`/blog/${post.slug}/`} className="focus-ring rounded-md hover:text-primary">
-                    {post.title}
-                  </Link>
-                </CardTitle>
-                <CardDescription>
-                  {post.date} | {post.readingTime}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm leading-6 text-muted-foreground">{post.summary}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      <SectionHeading
         eyebrow="Get in touch"
         title="Contact"
-        description="Email, GitHub, and LinkedIn are exposed directly for academic review and professional follow-up."
+        description="Only the confirmed GitHub profile is published. Professional contact details can be added later after verification."
         id="contact"
       />
       <section className="pb-20">
-        <div className="section-shell grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="section-shell grid gap-6">
           <Card>
             <CardHeader>
               <CardTitle>Direct links</CardTitle>
@@ -398,21 +340,9 @@ export default function Home() {
                 </Button>
               ))}
               <Separator />
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <ShieldCheck className="size-4 text-primary" aria-hidden="true" />
-                Contact form uses the local mail client and stores no messages.
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Contact form</CardTitle>
-              <CardDescription>
-                The form creates a mailto message without collecting analytics cookies or server-side personal data.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ContactForm email={identity.email} />
+              <p className="text-sm text-muted-foreground">
+                Personal contact details are intentionally omitted from this work-in-progress version.
+              </p>
             </CardContent>
           </Card>
         </div>

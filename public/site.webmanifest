@@ -1,9 +1,9 @@
 {
-  "name": "YMAN ALSHEABE Portfolio",
-  "short_name": "YMAN Portfolio",
+  "name": "Computer Engineering Student Portfolio",
+  "short_name": "Student Portfolio",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f8f7f3",
   "theme_color": "#267064",
-  "description": "Production-ready personal portfolio for YMAN ALSHEABE."
+  "description": "Work-in-progress portfolio with conservative and verified skill claims."
 }

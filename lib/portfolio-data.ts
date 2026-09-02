@@ -1,319 +1,165 @@
 import {
   BookOpen,
   Boxes,
-  BriefcaseBusiness,
   Code2,
-  Database,
   GraduationCap,
-  HeartHandshake,
-  Mail,
-  Network,
-  ServerCog,
-  ShieldCheck,
+  Languages,
   Terminal,
-  Wrench,
 } from "lucide-react";
 
 export const identity = {
-  name: "YMAN ALSHEABE",
-  displayName: "Yman Alsheabe",
-  schoolId: "23080410056",
-  role: "Computer Engineering Student | Full-Stack and DevOps Builder",
-  location: "Turkey",
-  email: "alshybyyman@gmail.com",
+  name: "Yaman",
+  displayName: "Yaman",
+  role: "4th-Year Computer Engineering Student",
+  location: "Türkiye",
   github: "https://github.com/Yaman12wqa",
-  linkedin: "https://www.linkedin.com/search/results/all/?keywords=YMAN%20ALSHEABE",
   avatar: "/yaman-avatar.png",
 };
 
 export const hero = {
   pitch:
-    "I build coursework-driven full-stack systems that connect usable interfaces with tested backends, Dockerized services, and security-aware delivery pipelines. My current focus is Next.js, TypeScript, Go, Node.js, and production deployment workflows that a reviewer can run and inspect.",
+    "I am a fourth-year Computer Engineering student at Bitlis Eren University. My confirmed programming level is basic Python and beginner C#, and I am currently strengthening these foundations through coursework and practical exercises.",
   secondaryPitch:
-    "This portfolio is intentionally built as a production artifact: static-exported Next.js, Nginx serving, JSON logs, health checks, CI, container scanning, and deployment paths for Fly.io and Coolify.",
-  cta: "Review projects",
+    "Several repositories on this profile were created with substantial AI assistance. I am reviewing them one by one, testing the code, simplifying unclear parts, and documenting only the knowledge I can explain accurately.",
+  cta: "Review learning projects",
 };
 
 export const projects = [
   {
-    name: "CampusConnect",
-    type: "Polyglot university community backend",
-    problem:
-      "University clubs need one reliable system for event publishing, student participation, notifications, and analytics instead of disconnected forms and chat messages.",
-    stack: [
-      "NestJS",
-      "TypeScript",
-      "Go",
-      "PostgreSQL",
-      "Prisma",
-      "GraphQL",
-      "JWT",
-      "Docker Compose",
-    ],
-    github: "https://github.com/Yaman12wqa/web-tabanli-programlama-final-1.-odev",
-    liveDemo:
-      "https://github.com/Yaman12wqa/web-tabanli-programlama-final-1.-odev#kurulum",
-    contribution:
-      "Designed the NestJS and Go service split, REST and GraphQL contracts, Prisma schema, JWT auth flow, webhook signing, Go API-key middleware, rate limiting, Docker Compose orchestration, and request documentation.",
+    name: "CampuSupport",
+    type: "University support-ticket learning prototype",
+    summary:
+      "A prototype for submitting, assigning, and tracking campus support requests. The latest version includes an API, a small browser interface, role-based flows, and automated API tests.",
+    technologies: ["Python", "FastAPI", "SQLAlchemy", "SQLite", "HTML", "JavaScript"],
+    github: "https://github.com/Yaman12wqa/CodeNight",
+    reviewStatus:
+      "Current review work covers repository hygiene, repairing the department-seeding defect, running the tests, and learning the API-to-database flow. Technologies listed here describe the repository; they are not all claimed as personal skills.",
   },
   {
-    name: "SecScan",
-    type: "Authorized web security scanner dashboard",
-    problem:
-      "Students need a safe, explainable way to run lightweight web security checks with SSRF protections, live progress, scoring, and report output for academic security labs.",
-    stack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Go",
-      "Gin",
-      "Server-Sent Events",
-      "Docker",
-      "Semgrep",
-      "Trivy",
-    ],
-    github: "https://github.com/Yaman12wqa/Finale-Do-ru-S-n-f---i-Projesi-Seri-3",
-    liveDemo:
-      "https://github.com/Yaman12wqa/Finale-Do-ru-S-n-f---i-Projesi-Seri-3#run-with-docker-compose",
-    contribution:
-      "Built the Go scanner service, SSRF validation boundaries, scanner registry, SSE progress flow, PDF report generation, Next.js frontend, Docker Compose setup, and security workflow documentation.",
-  },
-  {
-    name: "Academic Task Tracker",
-    type: "Coursework planning application",
-    problem:
-      "Students often track assignments, exams, project deadlines, and priorities across separate notes; the result is missed due dates and weak visibility into urgent work.",
-    stack: [
-      "React",
-      "Vite",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Mongoose",
-      "Axios",
-      "Lucide React",
-    ],
-    github: "https://github.com/Yaman12wqa/New-folder--3-",
-    liveDemo: "https://github.com/Yaman12wqa/New-folder--3-#uygulamayi-calistirma",
-    contribution:
-      "Implemented the full task CRUD workflow, dashboard summary cards, filters, search, sorting, due-date handling, REST API, MongoDB persistence layer, and local notes experience.",
-  },
-  {
-    name: "BEUBlog",
-    type: "Role-based full-stack blog platform",
-    problem:
-      "Academic content publishing needs authentication, author ownership, moderation, category management, media uploads, and a controlled admin review flow.",
-    stack: [
-      "React",
-      "Vite",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "JWT",
-      "Multer",
-      "Docker",
-      "Nginx",
-    ],
-    github: "https://github.com/Yaman12wqa/web-tabanli-programlama-3.-hafta-odevi",
-    liveDemo:
-      "https://github.com/Yaman12wqa/web-tabanli-programlama-3.-hafta-odevi#docker-ile-calistirma",
-    contribution:
-      "Built the React client, Express API, JWT session flow, role checks, post moderation states, profile updates, image upload handling, and Dockerized deployment layout.",
+    name: "BEUShareBox",
+    type: "Browser-based product-sharing practice project",
+    summary:
+      "A single-page practice application that stores products in the browser and supports adding, searching, filtering, liking, commenting, sharing, and deleting entries.",
+    technologies: ["HTML", "CSS", "JavaScript", "localStorage"],
+    github: "https://github.com/Yaman12wqa/2-week-project",
+    reviewStatus:
+      "This is a candidate for future hands-on rebuilding because its browser-only structure is easier to study than the larger AI-assisted repositories. Its JavaScript is still being evaluated before it is presented as a confirmed skill.",
   },
 ];
 
 export const skillGroups = [
   {
-    title: "Frontend",
+    title: "Confirmed programming",
     icon: Code2,
     skills: [
-      { name: "Next.js App Router", level: "Intermediate", note: "Static export, routing, metadata, component architecture" },
-      { name: "React", level: "Intermediate", note: "Stateful UI, forms, dashboards, reusable components" },
-      { name: "TypeScript", level: "Intermediate", note: "Strict project setup and typed data models" },
-      { name: "Tailwind CSS", level: "Intermediate", note: "Responsive layouts, dark mode, design tokens" },
+      {
+        name: "Python",
+        level: "Basic",
+        note: "Programming fundamentals and continued practice.",
+      },
+      {
+        name: "C#",
+        level: "Beginner",
+        note: "Currently studying a basic C# course.",
+      },
     ],
   },
   {
-    title: "Backend",
-    icon: Database,
+    title: "Languages",
+    icon: Languages,
     skills: [
-      { name: "Node.js and Express", level: "Intermediate", note: "REST APIs, validation, auth middleware" },
-      { name: "NestJS", level: "Developing", note: "Modular services, GraphQL, Prisma integration" },
-      { name: "Go", level: "Developing", note: "HTTP APIs, middleware, worker pools, security utilities" },
-      { name: "MongoDB and PostgreSQL", level: "Developing", note: "Mongoose schemas, Prisma models, SQL analytics" },
-    ],
-  },
-  {
-    title: "DevOps",
-    icon: ServerCog,
-    skills: [
-      { name: "Docker", level: "Intermediate", note: "Multi-stage builds and Compose orchestration" },
-      { name: "GitHub Actions", level: "Developing", note: "Lint, build, image scan, and GHCR publishing" },
-      { name: "Nginx", level: "Developing", note: "Static serving, health endpoint, cache and security headers" },
-      { name: "DevSecOps", level: "Developing", note: "Semgrep, Trivy, Gitleaks, critical-finding gates" },
-    ],
-  },
-  {
-    title: "Tools",
-    icon: Wrench,
-    skills: [
-      { name: "Git and GitHub", level: "Intermediate", note: "Repository workflows and technical documentation" },
-      { name: "Docker Desktop", level: "Developing", note: "Local containers and service verification" },
-      { name: "HTTP request files", level: "Intermediate", note: "Repeatable API testing flows" },
-      { name: "VS Code", level: "Intermediate", note: "TypeScript, REST, Docker, and Git workflow" },
+      { name: "Arabic", level: "Native", note: "Native language." },
+      { name: "Turkish", level: "C1", note: "Advanced working proficiency." },
+      { name: "English", level: "B1", note: "Intermediate communication." },
     ],
   },
 ];
 
-export const experience = [
+export const activities = [
   {
-    role: "Academic Full-Stack Developer",
-    organization: "Computer Engineering coursework",
-    period: "2025-2026",
+    role: "Code Night Competitor",
+    organization: "Bitlis Eren University",
+    period: "Date and challenge details to be confirmed",
     icon: GraduationCap,
     details: [
-      "Delivered multiple web programming projects with real CRUD, authentication, moderation, dashboards, Docker support, and written setup instructions.",
-      "Practiced production-style handoff by documenting environment variables, API routes, known limits, and verification commands.",
+      "Participated as a competitor in a university Code Night event.",
+      "The exact challenge, team structure, and individual contribution are still being documented and are not overstated here.",
     ],
   },
   {
-    role: "Security-Focused Project Builder",
-    organization: "SecScan academic project",
-    period: "2026",
-    icon: ShieldCheck,
+    role: "Current Learning",
+    organization: "Computer Engineering studies",
+    period: "Ongoing",
+    icon: BookOpen,
     details: [
-      "Built a controlled scanner dashboard for authorized testing with SSRF protection, scanner modules, server-sent progress, scoring, and PDF reporting.",
-      "Added CI security checks and documented ethical usage boundaries for academic review.",
-    ],
-  },
-  {
-    role: "Portfolio DevOps Maintainer",
-    organization: "Personal production portfolio",
-    period: "2026",
-    icon: BriefcaseBusiness,
-    details: [
-      "Created this portfolio as a deployable artifact with Next.js 15, Docker, Nginx, health checks, JSON logs, and CI/CD to GHCR.",
-      "Prepared deployment paths for both Fly.io and a VPS/Coolify workflow.",
+      "Practicing programming fundamentals with Python and beginner-level C#.",
+      "Reviewing existing AI-assisted repositories to understand their execution flow, data handling, tests, and limitations.",
     ],
   },
 ];
 
 export const education = {
-  university: "Computer Engineering undergraduate program, BEU academic coursework context",
-  degree: "Bachelor-level Computer Engineering studies",
-  gpa: "GPA not published in the provided project materials",
+  university: "Bitlis Eren University",
+  degree: "B.Sc. Computer Engineering",
+  year: "4th-year student",
   courses: [
-    "Web-based Programming",
-    "Database-backed Web Applications",
-    "Software Engineering Project Practice",
-    "Application Security Fundamentals",
-    "Containerized Deployment Workflows",
+    "Introduction to Computer Science",
+    "Algorithms and Problem Solving",
+    "Basic C# course (in progress)",
   ],
 };
 
-export const hobbies = [
-  "Building small web tools that solve coursework and productivity problems",
-  "Learning Go services and backend architecture through hands-on projects",
-  "Practicing safe web security labs on authorized targets",
-  "Improving technical documentation so projects are easier to run",
-];
-
-export const blogPosts = [
-  {
-    slug: "static-next-nginx",
-    title: "Why this portfolio is statically exported and served by Nginx",
-    date: "2026-04-27",
-    summary:
-      "A production portfolio should load quickly, have a small runtime surface, and still expose health checks and logs for operations review.",
-    readingTime: "4 min read",
-  },
-  {
-    slug: "devsecops-ci",
-    title: "DevSecOps checks included in the CI pipeline",
-    date: "2026-04-27",
-    summary:
-      "Semgrep checks source patterns, Gitleaks blocks secrets, and Trivy fails the image build on critical vulnerabilities.",
-    readingTime: "5 min read",
-  },
-  {
-    slug: "academic-projects-production",
-    title: "Turning academic projects into production evidence",
-    date: "2026-04-27",
-    summary:
-      "A strong submission needs clear problem statements, runbooks, environment files, health endpoints, container builds, and honest limitations.",
-    readingTime: "3 min read",
-  },
-];
-
-export const contactLinks = [
-  {
-    label: "Email",
-    value: identity.email,
-    href: `mailto:${identity.email}`,
-    icon: Mail,
-  },
-  {
-    label: "GitHub",
-    value: "github.com/Yaman12wqa",
-    href: identity.github,
-    icon: Terminal,
-  },
-  {
-    label: "LinkedIn",
-    value: "LinkedIn search: YMAN ALSHEABE",
-    href: identity.linkedin,
-    icon: Network,
-  },
-];
-
 export const metrics = [
-  { label: "Verified public repositories reviewed", value: "8" },
-  { label: "Portfolio sections required by rubric", value: "7/7" },
-  { label: "CI security tools", value: "3" },
-  { label: "Deployment targets documented", value: "2" },
+  { label: "Computer Engineering", value: "4th Year" },
+  { label: "Python level", value: "Basic" },
+  { label: "C# level", value: "Beginner" },
+  { label: "Spoken languages", value: "3" },
 ];
 
 export const architectureHighlights = [
   {
-    title: "Static Next.js frontend",
+    title: "Static portfolio",
     description:
-      "Next.js 15 App Router generates static HTML and assets for fast loading and low runtime risk.",
+      "This repository uses Next.js to generate static pages. This describes the implementation, not a claimed Next.js proficiency level.",
     icon: Boxes,
   },
   {
-    title: "Nginx production layer",
+    title: "Centralized content",
     description:
-      "Nginx serves the exported site, returns `/api/health`, writes structured JSON access logs, and exits gracefully with SIGQUIT.",
-    icon: ServerCog,
+      "Biography, projects, education, and confirmed skill levels are stored in one typed data file so unsupported claims are easier to find and correct.",
+    icon: Code2,
   },
   {
-    title: "DevSecOps pipeline",
+    title: "Reproducible checks",
     description:
-      "GitHub Actions runs linting, type checks, build, Docker build, Semgrep, Gitleaks, Trivy, and GHCR publishing.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Documented operations",
-    description:
-      "README, Docker Compose, Fly.io, Coolify, and environment files make the project reviewable and reproducible.",
-    icon: BookOpen,
+      "The repository provides lint, type-check, and build commands so changes can be verified before they are published.",
+    icon: Terminal,
   },
 ];
 
 export const values = [
   {
-    title: "Practical",
-    description: "Every section is backed by real repositories, setup instructions, or this production portfolio.",
-    icon: HeartHandshake,
-  },
-  {
-    title: "Reviewable",
-    description: "The project favors typed data, small components, explicit scripts, and deployment documentation.",
+    title: "Accurate",
+    description: "Skill claims are limited to information that has been personally confirmed.",
     icon: BookOpen,
   },
   {
-    title: "Operational",
-    description: "The final artifact is containerized, health-checked, logged, scanned, and ready for two deployment paths.",
-    icon: ServerCog,
+    title: "Learning-focused",
+    description: "Existing projects are being turned into exercises that can be understood and defended.",
+    icon: GraduationCap,
+  },
+  {
+    title: "Reviewable",
+    description: "Known limitations and current review status are documented instead of hidden.",
+    icon: Boxes,
+  },
+];
+
+export const contactLinks = [
+  {
+    label: "GitHub",
+    value: "github.com/Yaman12wqa",
+    href: identity.github,
+    icon: Terminal,
   },
 ];

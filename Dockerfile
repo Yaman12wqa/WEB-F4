@@ -14,8 +14,8 @@ COPY . .
 RUN npm run build
 
 FROM nginx:1.29-alpine AS runner
-LABEL org.opencontainers.image.title="YMAN ALSHEABE Portfolio"
-LABEL org.opencontainers.image.description="Static Next.js 15 portfolio served by Nginx with health checks and JSON logs."
+LABEL org.opencontainers.image.title="Computer Engineering Student Portfolio"
+LABEL org.opencontainers.image.description="Work-in-progress static student portfolio served by Nginx."
 LABEL org.opencontainers.image.source="https://github.com/Yaman12wqa/WEB-F4"
 
 COPY nginx.conf /etc/nginx/nginx.conf

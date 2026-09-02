@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: `${identity.displayName} | Full-Stack and DevOps Portfolio`,
+  title: `${identity.displayName} | Computer Engineering Student Portfolio`,
   description: hero.pitch,
   authors: [{ name: identity.displayName }],
   creator: identity.displayName,
@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     ],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 };
 
@@ -48,9 +48,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: identity.displayName,
-    email: identity.email,
     url: identity.github,
-    sameAs: [identity.github, identity.linkedin],
+    sameAs: [identity.github],
     jobTitle: identity.role,
   };
 
