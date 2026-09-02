@@ -1,9 +1,7 @@
-Öğrenci: YMAN ALSHEABE
-Okul No: 23080410056
 
 [![CI/CD](https://github.com/Yaman12wqa/WEB-F4/actions/workflows/ci.yml/badge.svg)](https://github.com/Yaman12wqa/WEB-F4/actions/workflows/ci.yml)
 
-# YMAN ALSHEABE Production Portfolio
+ Production Portfolio
 
 Production-ready personal portfolio built for academic evaluation with Next.js 15, TypeScript, Tailwind CSS, shadcn/ui-style components, Docker, Nginx, GitHub Actions, and DevSecOps scanning.
 
